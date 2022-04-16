@@ -5,7 +5,7 @@ const instance = axios.create({
 	baseURL: 'https://api.themoviedb.org/3/',
 	params: {
 		api_key: API_KEY,
-		language: 'pt-BR',
+		language: 'en-US',
 		append_to_response: 'videos,images,keywords,credits,release_dates'
 	},
 	timeout: 1000,
