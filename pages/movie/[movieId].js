@@ -36,7 +36,7 @@ export default function Movie() {
     if (!data) return (<Loading.Context><Loading.Content /></Loading.Context>)
 
 
-    console.log(data);
+  
     const renderedMovie = (movie) => {
 
         return (
