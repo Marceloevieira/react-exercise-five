@@ -21,7 +21,7 @@ export default function Favorites() {
                 <Card.Title>{movie.title}</Card.Title>
                 <PlaylistAddons>
                     <Button onClick={() => handleRemoveItem(movie.id)} >to remove</Button>
-                    <Link href={`/movie/${movie.id}`}><Button>View details</Button></Link>
+                    <Link href={`/movie/${movie.id}`} passHref><Button>View details</Button></Link>
                 </PlaylistAddons>
             </Card.Body>
         )
