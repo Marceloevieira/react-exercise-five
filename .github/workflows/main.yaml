@@ -13,12 +13,12 @@ jobs:
             - name: Install client dependencies
               working-directory: ./
               run: yarn install
-            - name: Client tests lint 
+            - name: Client tests lint
               run: yarn run lint
             - name: Cypress run
               uses: cypress-io/github-action@v1
               with:
-                  working-directory: ./
+                  working-directory: client
                   build: yarn run build
                   start: yarn run start
                   wait-on: http://localhost:3000
