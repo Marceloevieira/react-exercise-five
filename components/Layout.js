@@ -13,7 +13,6 @@ Layout.Context = styledComponents.div`
 
 `;
 
-Layout.Context.displayName = 'adasd';
 
 Layout.Header = () => {
 
