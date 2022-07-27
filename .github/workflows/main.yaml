@@ -16,7 +16,7 @@ jobs:
             - name: Client tests lint
               run: yarn run lint
             - name: Cypress run
-              uses: cypress-io/github-action@v1
+              uses: cypress-io/github-action@v4
               with:
                   working-directory: ./
                   build: yarn run build
