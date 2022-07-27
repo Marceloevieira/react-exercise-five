@@ -13,8 +13,8 @@ jobs:
             - name: Install client dependencies
               working-directory: ./
               run: yarn install
-            - name: Client tests  
-              run: yarn run test
+            - name: Client tests lint 
+              run: yarn run lint
             - name: Cypress run
               uses: cypress-io/github-action@v1
               with:
