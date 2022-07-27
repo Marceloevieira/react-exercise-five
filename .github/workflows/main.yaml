@@ -15,10 +15,4 @@ jobs:
               run: yarn install
             - name: Client tests lint
               run: yarn run lint
-            - name: Cypress run
-              uses: cypress-io/github-action@v4
-              with:
-                  working-directory: ./
-                  build: yarn run build
-                  start: yarn run start
-                  wait-on: http://localhost:3000
+
