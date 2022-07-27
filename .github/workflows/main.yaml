@@ -18,7 +18,7 @@ jobs:
             - name: Cypress run
               uses: cypress-io/github-action@v1
               with:
-                  working-directory: client
+                  working-directory: ./
                   build: yarn run build
                   start: yarn run start
                   wait-on: http://localhost:3000
