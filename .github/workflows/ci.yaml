@@ -9,7 +9,7 @@ on:
 
 jobs:
     build:
-        uses: ./.github/workflows/code-check.yaml
+        uses: ./.github/workflows/build_test.yaml
         secrets: inherit
     release:
         needs: build
