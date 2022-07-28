@@ -13,6 +13,7 @@ jobs:
         secrets: inherit
     release:
         needs: build
+        if: github.ref == 'refs/heads/main'
         uses: ./.github/workflows/release.yaml
         secrets: inherit
     deploy:
