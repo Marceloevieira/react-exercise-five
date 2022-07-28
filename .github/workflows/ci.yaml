@@ -11,9 +11,12 @@ jobs:
     build:
         uses: ./.github/workflows/code-check.yaml
         secrets: inherit
-
-    deploy:
+    release:
         needs: build
+        uses: ./.github/workflows/release.yaml
+        secrets: inherit
+    deploy:
+        needs: release
         if: github.ref == 'refs/heads/main'
         uses: ./.github/workflows/deploy.yaml
         with:
