@@ -27,4 +27,6 @@ jobs:
               uses: actions/upload-artifact@v1
               with:
                   name: react-github-actions-build
-                  path: ./
+                  path: |
+                      ./
+                      !node_modules
