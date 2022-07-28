@@ -1,0 +1,21 @@
+name: CI
+
+on:
+    push:
+        branches: ["main", "develop"]
+    pull_request:
+        branches: ["main"]
+    workflow_dispatch:
+
+jobs:
+    build:
+        uses: ./.github/workflows/code-check.yaml
+        secrets: inherit
+
+    deploy:
+        needs: build
+        if: github.ref == 'refs/heads/main'
+        uses: ./.github/workflows/3_2-api-deploy.yaml
+        with:
+            tag_name: latest
+        secrets: inherit

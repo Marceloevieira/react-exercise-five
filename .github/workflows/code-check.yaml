@@ -1,8 +1,13 @@
-name: Build and Test
-on: [push]
+name: Code Check
+
+on:
+    workflow_call:
+
 jobs:
-    build-and-test:
+    build:
         runs-on: ubuntu-latest
+        strategy:
+            fail-fast: false
         steps:
             - name: Checkout
               uses: actions/checkout@v2
@@ -15,4 +20,3 @@ jobs:
               run: yarn install
             - name: Client tests lint
               run: yarn run lint
-
