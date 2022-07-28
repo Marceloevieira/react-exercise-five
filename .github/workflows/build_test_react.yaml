@@ -1,10 +1,10 @@
-name: Code Check
+name: build_test_react
 
 on:
     workflow_call:
 
 jobs:
-    build:
+    build_test:
         runs-on: ubuntu-latest
         strategy:
             fail-fast: false
@@ -27,4 +27,3 @@ jobs:
               uses: actions/upload-artifact@v1
               with:
                   name: react-github-actions-build
-                  path: .next
