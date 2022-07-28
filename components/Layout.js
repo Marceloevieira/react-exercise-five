@@ -13,6 +13,7 @@ Layout.Context = styledComponents.div`
 
 `;
 
+
 Layout.Header = () => {
 
     return (
@@ -21,13 +22,13 @@ Layout.Header = () => {
             <nav>
                 <Nav>
                     <NavItem>
-                        <Link href={'/'} ><NavLink color='black'>Home</NavLink></Link>
+                        <Link href={'/'} passHref><NavLink color='black'>Home</NavLink></Link>
                     </NavItem>
                     <NavItem>
-                        <Link href={'/movies'} ><NavLink color='black'>movies</NavLink></Link>
+                        <Link href={'/movies'} passHref><NavLink color='black'>movies</NavLink></Link>
                     </NavItem>
                     <NavItem>
-                        <Link href={'/favorites'} ><NavLink color='black'>favorites</NavLink></Link>
+                        <Link href={'/favorites'} passHref><NavLink color='black'>favorites</NavLink></Link>
                     </NavItem>
                 </Nav>
             </nav>
