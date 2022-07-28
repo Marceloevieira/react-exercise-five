@@ -1,4 +1,4 @@
-name: Deploy
+name: Deploy in Heroku
 
 on:
     workflow_call:
